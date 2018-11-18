@@ -1,0 +1,66 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+html{
+    height: 100%;
+}
+
+body {
+    height: 100%;
+	padding: 0;
+	margin: 0;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background: rgb(246, 246, 246) no-repeat scroll;
+    background-size: auto auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+}
+
+/* footer */
+/* 使固定在底部 */
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#header{
+    /* 我们希望 header 采用固定的高度，只占用必须的空间 */
+    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 0 0 auto;
+}
+
+#main {
+    /* 将 flex-grow 设置为1，该元素会占用全部可使用空间
+      而其他元素该属性值为0，因此不会得到多余的空间*/
+    /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 1 0 auto
+}
+
+#footer{
+    /* 和 header 一样，footer 也采用固定高度*/
+    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 0 0 auto;
+}
+
+/* 备案信息 */
+.copyright {
+    font-size: 16px;
+    width:100%;
+    margin:0 auto;
+    padding:20px 0;
+    text-align: center;
+    color:#939393;
+}
+
+.copyright a {
+    display:inline-block;
+    text-decoration:none;
+    color:#939393;
+}
+
