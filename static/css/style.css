@@ -83,6 +83,14 @@ body {
     word-spacing: -0.43em;
 }
 
+/* 增加移动到文字时的高亮效果 */
+.topNav li>a:hover {
+	background:#fff;
+    //text-decoration: overline;
+	box-shadow:0 2px 0 #38a3fd inset;
+	transition:0s
+}
+
 /* footer */
 /* 使固定在底部 */
 body {
