@@ -54,6 +54,24 @@ body {
 	transition:background-color .3s ease 0s;
 }
 
+/* 增加导航文字颜色渐变效果　*/
+.menu_item>a {
+    text-decoration: none;
+    color:rgba(83,104,121,0.2); /* 导航栏非高亮时的字体颜色和透明度　*/
+}
+
+.topNav:hover li>a {
+	color:#536879;  /* 导航栏高亮时的字体颜色　*/
+	transition:color .3s
+}
+.topNav:hover li>a:hover {  /* 移动到具体项时的文字颜色　*/
+	color:#38a3fd;
+	transition:color .3s
+}
+
+
+
+
 
 /* footer */
 /* 使固定在底部 */
