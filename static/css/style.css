@@ -21,6 +21,25 @@ body {
     background-clip: border-box;
 }
 
+/* 顶部导航栏　*/
+.menu_item {
+    padding:0 20px;
+    text-align: center;
+    display: inline-block;
+    height:60px;
+    line-height:60px;
+
+    display: inline-block;
+    height: 45px;
+    margin: 0px;
+    position: relative;
+    z-index: 1;
+    list-style: outside none none;
+    vertical-align: top;
+    word-spacing: normal;
+
+}
+
 /* footer */
 /* 使固定在底部 */
 body {
