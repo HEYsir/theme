@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="header" class="topNav">
-    <ul>
+    <ul class="menu">
         {% for topNav in top_nav %}
         <li class="menu_item"><a href="{% url 'index' %}">{{ topNav.name }}</a></li>
         {% endfor %}

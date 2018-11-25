@@ -69,9 +69,19 @@ body {
 	transition:color .3s
 }
 
+.menu {
+    height: 60px;
+    //text-align: right;
+    margin: 0px;
+    opacity: 1;
 
-
-
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    word-spacing: -0.43em;
+}
 
 /* footer */
 /* 使固定在底部 */
