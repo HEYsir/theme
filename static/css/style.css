@@ -37,8 +37,23 @@ body {
     list-style: outside none none;
     vertical-align: top;
     word-spacing: normal;
-
 }
+
+/* 顶部导航栏增加鼠标移动返现效果，主要透明度渐变　*/
+.topNav {
+	position:absolute;
+	top:0;
+	z-index:999;
+	width:100%;
+	background:rgba(255,255,255,0);
+    transition: background-color 1s ease 0s;
+}
+
+.topNav:hover {
+	background:rgba(255,255,255,0.85);
+	transition:background-color .3s ease 0s;
+}
+
 
 /* footer */
 /* 使固定在底部 */
