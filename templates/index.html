@@ -11,14 +11,31 @@
     <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
 </head>
 <body>
-<div id="header" class="topNav">
+<div id="header">
+    <div  class="topNav">
     <ul class="menu">
         {% for topNav in top_nav %}
         <li class="menu_item"><a href="{% url 'index' %}">{{ topNav.name }}</a></li>
         {% endfor %}
-    </ul>
+    </ul></div>
+    <div class="top-img"></div>
 </div>
-<div id="main"></div>
+<div id="main">
+    <div class="sidebar">
+        <div class="sidebar-designer">
+            <div class="designer">
+                <div class="avatar">
+                    <a href="https://www.noinf.com/" title={{ userInfo.nicename }}>
+                        <img src="{% static "images/avatar.png" %}" alt="{{ userInfo.nicename }}的头像" width="50%">
+                    </a>
+                </div>
+                <h2 class="brand-title">{{ userInfo.nicename }}</h2>
+                <h4 class="brand-tagline">{{ userInfo.motto }}</h4>
+            </div>
+
+        </div>
+    </div>
+</div>
 <div id="footer">
     <!-- 备案信息 -->
     <div class="copyright">
