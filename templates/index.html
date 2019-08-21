@@ -54,10 +54,10 @@
     <!-- 备案信息 -->
     <div class="copyright">
         Copyright © 2016-2018 / noinf / All Rights Reserved. /
-        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33022502000082">
-            <img src="{% static '/images/public_regist.png' %}" />浙公网安备 {{beian_police}}</a>
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode={{ beian_police_no }}">
+            <img src="{% static '/images/public_regist.png' %}" />{{beian_police}}</a>
          /
-        <a target="_blank" href="http://www.miitbeian.gov.cn/">浙ICP备{{beian_miit}}</a>
+        <a target="_blank" href="http://www.miitbeian.gov.cn/">{{beian_miit}}</a>
     </div>
 </div>
 </body>
