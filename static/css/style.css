@@ -191,6 +191,45 @@ body {
 }
 
 
+/*--------------------------------------------------------------
+### Widget tabbed post widget style
+--------------------------------------------------------------*/
+.tabs {
+    width: 100%;
+    display: inline-block;
+}
+
+
+.tab-links {
+    margin-bottom: 10px;
+    overflow: hidden;
+	padding: 0 0 0 0;
+}
+
+.tab-links li {
+	display: inline-block;
+    border: medium none;
+    float: left;
+    text-align: center;
+    width: 33.33%;
+    padding: 0;
+}
+
+.tabs .tab-links li a {
+    padding: 5px 0;
+    background: #616161;
+    color: #fff;
+    display: block;
+    border-left: 1px solid rgba(255, 255, 255, 0.24);
+    font-size: 14px;
+}
+
+.tabs .tab-links li.active a,
+.tabs .tab-links li a:hover {
+    background: #38a3fd;
+    color: #fff;
+}
+
 /* footer */
 /* 使固定在底部 */
 body {
