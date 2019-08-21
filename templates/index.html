@@ -9,6 +9,10 @@
 
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
+    <!-- 特殊媒体符号 -->
+{#    <link rel="stylesheet" type="text/css" href="{% static 'css/fontaesome/css/font-awesome.min.css' %}" />#}
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
 </head>
 <body>
 <div id="header">
@@ -33,6 +37,15 @@
                 <h4 class="brand-tagline">{{ userInfo.motto }}</h4>
             </div>
             <div class="sns">
+                <a href="https://www.noinf.com/feed" target="_blank" rel="nofollow" title="RSS">
+                    <i class="fa fa-rss" aria-hidden="true">RSS</i>
+                </a>
+                <a href="{{ userInfo.weibo }}" target="_blank" rel="nofollow" title="{{ fielddic.weibo }}">
+                    <i class="fa fa-weibo" aria-hidden="true">{{ fielddic.weibo }}</i>
+                </a>
+                <a href="{{ userInfo.github }}" target="_blank" rel="nofollow" title="{{ fielddic.github }}">
+                    <i class="fa fa-github" aria-hidden="true">{{ fielddic.github }}</i>
+                </a>
             </div>
         </div>
     </div>

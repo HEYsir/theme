@@ -180,6 +180,17 @@ body {
 	border-bottom:1px solid #f0f2f4
 }
 
+.sns a {
+    color:#b2b4b6;
+    margin:0 3px;
+    font-size:16px
+}
+
+.sns a:hover {
+	color:#38a3fd;
+}
+
+
 /* footer */
 /* 使固定在底部 */
 body {
@@ -190,7 +201,6 @@ body {
 
 #header{
     /* 我们希望 header 采用固定的高度，只占用必须的空间 */
-    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
     flex: 0 0 auto;
 }
 
