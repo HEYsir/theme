@@ -71,7 +71,7 @@
             <div class="tab-content">
                 <div id="tab2-1" class="tab active" style="display: block;">
                     <div class="side-list">
-                        {% for article in last_article_list %}
+                        {% for article in last_article_list|slice:":5" %}
                         <div class="side-item">
                             <div class="side-item-thumb">
                                 <a href="{% url 'detail' article.id %}"><img
@@ -93,7 +93,7 @@
                 </div>
                 <div id="tab2-2" class="tab" style="display: none;">
                     <div class="side-list">
-                        {% for article in popular_article_list %}
+                        {% for article in popular_article_list|slice:":5" %}
                         <div class="side-item">
                             <div class="side-item-thumb">
                                 <a href="{% url 'detail' article.id %}">
