@@ -140,7 +140,7 @@
                     <a class="fa fa-folder-open">{{ article.category.pid }}</a>.<a>{{ article.category  }}</a>
                     <i class="fa fa-tags"></i>
                     {% for tag in  article.tag.all %}
-                    <span class="tag-item">{{ tag }}</span>
+                    <a class="tag-item">{{ tag }}</a>
                     {% endfor %}
                 </div>
                 <div class="article-info">
@@ -157,6 +157,8 @@
     </div>
     <div id="main-right">
         test:main-right
+        <div id="ad">
+        </div>
     </div>
 </div>
 <div id="footer">
