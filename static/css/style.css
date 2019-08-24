@@ -437,10 +437,19 @@ body {
 #ad {
     width: 100%;
     background: green;
+
+    position: relative;
 }
 
 #ad:after {
     content: '';
     display: block;
     padding-bottom: 100%;
+}
+
+/* 配合父元素的relative实现图片在盒子内 */
+.ad-image {
+    position: absolute;
+    width:100%;
+    height: 100%;
 }
