@@ -387,3 +387,22 @@ body {
     color: #2828ca;
 }
 
+/* 文本编辑器输入的会带个p标签 */
+.article-content>p {
+    margin: 10px 0 10px 0;
+}
+
+/* 文章附属信息显示布局 */
+.article-meta {
+    display: flex;
+    font-size: 14px;
+}
+
+.article-folder {
+    flex: 1 1 auto;
+}
+
+.article-info {
+    flex: 0 1 auto;
+    color: #818183;
+}
