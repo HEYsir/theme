@@ -453,3 +453,24 @@ body {
     width:100%;
     height: 100%;
 }
+
+.ad-info {
+    position: absolute;
+
+    height: 100%;   /* 保证内容分布整个盒子子，否则紧挨着 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 主轴两端对齐 */
+}
+
+.ad-des {
+    flex: 1 1 auto;
+    margin: 0;
+}
+
+.ad-idx {
+    flex: 0 1 auto;
+    align-self: flex-end;   /* 保证在右下角 */
+
+    margin: 0;
+}
