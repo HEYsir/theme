@@ -79,8 +79,8 @@
     </div>
     </div>
     <div id="main-middle">
-        {% if last_article_list %}
-        {% for article in last_article_list %}
+        {% if article_list %}
+        {% for article in article_list %}
         <div class="articlelist">
             <div class="article-title">
                 {% if article.is_recommend %}
@@ -113,6 +113,26 @@
         </div>
         {% endfor %}
         {% endif %}
+{#         实现分页标签的代码 #}
+        <div id="pagination">
+            <ul id="pagination-flickr">
+                {% if article_list.has_previous %}
+                <li class="previous">
+                    <a href="?page={{ article_list.previous_page_number }}{%if request.GET.year %}&year={{ request.GET.year }}{% endif %}{%if request.GET.month %}&month={{ request.GET.month }}{% endif %}{%if request.GET.tag %}&tag={{ request.GET.tag }}{% endif %}">«上一页</a>
+                </li>
+                {% else %}
+                <li class="previous-off">«上一页</li>
+                {% endif %}
+                <li class="active">{{ article_list.number }}/{{ article_list.paginator.num_pages }}</li>
+                {% if article_list.has_next %}
+                <li class="next">
+                    <a href="?page={{ article_list.next_page_number }}{%if request.GET.year %}&year={{ request.GET.year }}{% endif %}{%if request.GET.month %}&month={{ request.GET.month }}{% endif %}{%if request.GET.tag %}&tag={{ request.GET.tag }}{% endif %}">下一页 »</a>
+                </li>
+                {% else %}
+                <li class="next-off">下一页 »</li>
+                {% endif %}
+            </ul>
+        </div>
     </div>
     <div id="main-right">
         test:main-right
@@ -230,7 +250,7 @@
     <div class="copyright">
         Copyright © 2016-2018 / noinf / All Rights Reserved. /
         <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode={{ beian_police_no }}">
-            <img src="{% static '/images/public_regist.png' %}" />{{beian_police}}</a>
+            <img src="{% static 'images/public_regist.png' %}" />{{beian_police}}</a>
          /
         <a target="_blank" href="http://www.miitbeian.gov.cn/">{{beian_miit}}</a>
     </div>
