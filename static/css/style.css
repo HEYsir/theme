@@ -36,14 +36,25 @@ body {
 #header{
     /* 我们希望 header 采用固定的高度，且只占用内部元素必须的空间 */
      /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
-    flex: 0 0 auto;
+    flex: 1 1 auto;
+}
+
+#body {
+    /* 将 flex-grow 设置为1，该元素会占用全部可使用空间
+      而其他元素该属性值为0，因此不会得到多余的空间*/
+    /* 1 flex-grow, 1 flex-shrink, auto flex-basis */
+    flex: 1 1 auto;
+    overflow-y: scroll; /* 关键设置，配合flex-shrink=1进行缩放，实现头部固定 */
+
+    display: flex;
+    flex-direction: column;
 }
 
 #main {
     /* 将 flex-grow 设置为1，该元素会占用全部可使用空间
       而其他元素该属性值为0，因此不会得到多余的空间*/
-    /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
-    flex: 1 0 auto
+    /* 1 flex-grow, 1 flex-shrink, auto flex-basis */
+    flex: 1 1 auto;
 }
 
 #footer{
@@ -51,6 +62,7 @@ body {
     /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
     flex: 0 0 auto;
 }
+
 /* 主体内容部分空间布局，采用左中右布局 */
 #main-left {
     width:20%;
