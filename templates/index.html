@@ -15,6 +15,7 @@
 
     <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/slider.js' %}"></script>
 </head>
 <body>
 <div id="header">
@@ -158,11 +159,32 @@
     <div id="main-right">
         test:main-right
         <div id="ad">
-            <img class="ad-image" id="1" src="/uploads/ad/ad_None_广告测试1/1410625161213.jpeg" alt=""/>
-            <div class="ad-info" style="color: brown">
-                <p class="ad-des"><span><strong>广告测试1</strong><br>这是一个广告测试,测试内容长一点，看看到底能显示成什么样</span></p>
-                <p class="ad-idx">1</p>
+            {% for ad in ad_list %}
+            <img class="ad-image"  src="uploads/{{ ad.image_url }}">
+            {% endfor %}
+            <a href="/" target="_target">
+            <div class="ad-info">
+                <p class="ad-des"><span><strong></strong><br></span></p>
+                <div class="ad-idx">
+                    {% for ad in ad_list %}
+                    <span>{{ forloop.counter }}</span>
+                    {% endfor %}
+                </div>
             </div>
+            </a>
+            <script>
+                var ad = {};
+                ad.data = [
+                    {% for ad in ad_list %}
+                    {
+                        "title": "{{ ad.title }}",
+                        "des": "{{ ad.description }}",
+                        "img_url": "{{ ad.image_url }}",
+                        "callback_url": "{{ ad.callback_url }}"
+                    },
+                    {% endfor %}
+                ]
+            </script>
         </div>
     </div>
 </div>
