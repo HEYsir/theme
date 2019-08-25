@@ -234,6 +234,22 @@ body {
 }
 
 
+.weixin {
+    position: absolute;
+    bottom: 10px;
+
+    color: blue;
+    font-size: 14px;
+    text-align: center;
+
+    width: 20%;/* 相对这个页面的大小*/
+}
+
+.weixin img{
+    width: 40%;
+}
+
+
 /*--------------------------------------------------------------
 ### Widget tabbed post widget style
 --------------------------------------------------------------*/
@@ -496,3 +512,54 @@ body {
     opacity: 1;
     filter: alpha(opacity=100);
 }
+
+/* 右侧边专题样式 */
+.topic {
+    margin-bottom: 25px;
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 0
+}
+
+.topic a {
+    color: #4c4c4c;
+    text-decoration: none;
+    -webkit-transition: color .3s;
+    transition: color .3s
+}
+
+.topic ul {
+    padding: 0;
+    margin: 0
+}
+
+.topic li {
+    list-style: none;
+    padding: 2px 0;
+    margin: 0
+}
+
+.topic .topic-title {
+    position: relative;
+    margin: 0 0 15px;
+    padding-bottom: 15px
+}
+
+.topic .topic-title::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 40px;
+    background-color: #5bc0eb;
+    content: ""
+}
+
+.topic-cat li::before {
+    content: "\f07b";
+    font-family: "FontAwesome", serif;
+    font-weight: 400;
+    margin-right: 8px
+}
+
