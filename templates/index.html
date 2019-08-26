@@ -78,6 +78,8 @@
         </div>
     </div>
     </div>
+    {% block left_content %}
+    {% endblock %}
     <div id="main-middle">
         {% if article_list %}
         {% for article in article_list %}
@@ -87,7 +89,7 @@
                 <span class="article-flag article-recommend">荐</span>
                 {% endif %}
                 <span class="article-flag article-type" >原</span>
-                <a href="{{ article.get_absolute_url }}">
+                <a href="javascript:void(0)" onclick=" openDialog('{% url 'detail' article.id %}')">
                     {{ article.title }}
                 </a>
             </div>
@@ -255,6 +257,7 @@
         <a target="_blank" href="http://www.miitbeian.gov.cn/">{{beian_miit}}</a>
     </div>
 </div>
+<div id= "pop-article"></div>
 </div>
 </body>
 </html>

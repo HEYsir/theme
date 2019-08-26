@@ -9,3 +9,25 @@
         })
     })
 }(jQuery);
+
+
+function openDialog(url){
+    $.ajax({
+        type:"GET",
+        url: url, //后台处理函数的url
+        cache: false,
+        dataType: "html",
+        success: function(result){
+            $("#pop-article").html(result);
+            document.getElementById('pop-article').style.display='block';
+        },
+        error: function(){
+            alert("false");
+        }
+    });
+    return false;
+}
+function closeDialog(){
+    document.getElementById('light').style.display='none';
+    document.getElementById('fade').style.display='none'
+}

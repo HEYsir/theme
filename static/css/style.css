@@ -630,3 +630,54 @@ body {
     background: #0063DC;
     color: #FFF;
 }
+
+#pop-article {
+    display: none;
+}
+
+.white_content {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 70%;
+    height: 80%;
+    background-color: white;
+    z-index: 1002;
+    overflow: auto;
+
+}
+
+.black_overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #818183;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+.win-func {
+    top: 10%;
+    left: 10%;
+    width: 100%;
+    background-color: #818183;
+    border:1px solid #3c3c3c;
+
+    text-align: right;
+}
+
+.win-func a {
+    color: #3c3c3c;
+    text-decoration: none;
+}
+
+.win-func a:hover {
+    color: #9f9f9f;
+    text-decoration: none;
+}
