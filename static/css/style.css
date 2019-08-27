@@ -311,15 +311,10 @@ body {
     margin: 0;
 }
 
-.tab-content img {
-	width: 70px;
-	height: auto;
-}
-
 .side-item-thumb {
     float: left;
-    margin-right: 15px;
-    width: 70px;
+    margin-right: 2px;
+    width:38px;
 }
 
 .side-item {
