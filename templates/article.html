@@ -3,7 +3,7 @@
 <div id="fade" class="black_overlay"></div>
 <div id="light" class="white_content">
     <div class="win-func"><a href = "javascript:void(0)" onclick = "closeDialog()">【关闭】</a></div>
-    <div >
+    <div class="article">
         <div class="article-title">
             {% if article.is_recommend %}
             <span class="article-flag article-recommend">荐</span>
@@ -13,9 +13,6 @@
             <a href="javascript:void(0)" onclick=" openDialog('{% url 'detail' article.id %}')">
                 {{ article.title }}
             </a>
-        </div>
-        <div class="article-content">
-            {{ article.content | safe }}
         </div>
         <div class="article-meta">
             <div class="article-folder">
@@ -32,6 +29,9 @@
                 <span class="fa fa-comments-o">{{ article.comment_set.all.count }}评论</span>
                 <span class="fa fa-heart-o">{{ article.likes_count }}喜欢</span>
             </div>
+        </div>
+        <div class="article-content">
+            {{ article.content | safe }}
         </div>
     </div>
 </div>

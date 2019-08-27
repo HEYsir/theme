@@ -31,3 +31,10 @@ function closeDialog(){
     document.getElementById('light').style.display='none';
     document.getElementById('fade').style.display='none'
 }
+
+$(document).bind('keydown', 'esc', function (evt) {
+        //关闭层代码
+        closeDialog();
+        return false;
+    }
+);
