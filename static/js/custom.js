@@ -28,6 +28,7 @@ function openDialog(url){
     return false;
 }
 function closeDialog(){
+    window.parent.location.reload();
     document.getElementById('light').style.display='none';
     document.getElementById('fade').style.display='none'
 }
