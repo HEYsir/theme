@@ -94,7 +94,7 @@
                 </a>
             </div>
             <div class="article-content">
-                {{ article.content|truncatewords:5|linebreaks }}
+                {{ article.content|safe|truncatewords:5|linebreaks }}
             </div>
             <div class="article-meta">
                 <div class="article-folder">
