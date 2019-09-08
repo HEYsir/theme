@@ -230,14 +230,9 @@
         <aside class="topic clearfix">
             <h4 class="topic-title">专题</h4>
             <ul class="topic-cat">
-                <li><a href="/" title="产品的心得，工作的感悟">心得感悟</a> (11)</li>
-                <li><a href="/" title="阅读笔记和读后感">阅读笔记</a> (17)</li>
-                <li><a href="/" title="工作之外事，也可调侃谈。">天下杂侃</a> (48)</li>
-                <li><a href="/" title="职场也人生，学习更上进。">职场人生</a> (55)</li>
-                <li><a href="/" title="若有好东西，岂能我独享。">一些分享</a> (31)</li>
-                <li><a href="/" title="体验各产品，总结些体会。">产品体验</a> (7)</li>
-                <li><a href="/" title="产品的心得，设计的技巧。">产品设计</a> (29)</li>
-                <li><a href="/" title="思维的火花，有趣的想法。">奇思妙想</a> (11)</li>
+                {% for topic in topic_list %}
+                <li><a href="/" title="{{ topic.desc }}">{{ topic.title }}</a> ({{ topic.article_set.count }})</li>
+                {% endfor %}
             </ul>
         </aside>
     </div>
