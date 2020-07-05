@@ -21,8 +21,9 @@
 <div id="header">
     <div  class="topNav">
     <ul class="menu">
+        <li class="menu_item"><a href="{% url 'index' %}">首页</a></li>
         {% for topNav in top_nav %}
-        <li class="menu_item"><a href="{% url 'index' %}">{{ topNav.name }}</a></li>
+        <li class="menu_item"><a href="{% url 'index' %}?topNav={{ topNav.id }}">{{ topNav.name }}</a></li>
         {% endfor %}
     </ul></div>
     <div class="top-img"></div>
@@ -231,7 +232,7 @@
             <h4 class="topic-title">专题</h4>
             <ul class="topic-cat">
                 {% for topic in topic_list %}
-                <li><a href="/" title="{{ topic.desc }}">{{ topic.title }}</a> ({{ topic.article_set.count }})</li>
+                <li><a href="{% url 'topic_article' topic.id %}">{{ topic.title }}</a> ({{ topic.article_set.count }})</li>
                 {% endfor %}
             </ul>
         </aside>
