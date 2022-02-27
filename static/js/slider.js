@@ -53,9 +53,12 @@ window.onload = function () {
     function show(a) {
         index = a;
         var alpha = 0;
-
+        if (index >= aNum.length) {
+            return;
+        }
         for (i = 0; i < aNum.length; i++)
             aNum[i].className="";
+        
         aNum[index].className = "active";
 
         href[0].setAttribute("href", ad.data[index]["callback_url"] );
