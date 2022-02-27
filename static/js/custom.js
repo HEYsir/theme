@@ -18,7 +18,10 @@ function openDialog(url){
         cache: false,
         dataType: "html",
         success: function(result){
-            $("#pop-article").html(result);
+            // const markdown = "**Markdown**"
+            // console.log("\nmarkdown input:", markdown, "\n")
+            let Md2HTMLCon = lute.MarkdownStr("", result)
+            $("#pop-article").html(Md2HTMLCon);
             document.getElementById('pop-article').style.display='block';
         },
         error: function(){
