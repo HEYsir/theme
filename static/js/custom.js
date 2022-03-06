@@ -38,8 +38,11 @@ function closeDialog(){
     // document.getElementById('fade').style.display='none'
 }
 
-$(document).bind('keydown', 'esc', function (evt) {
+$(document).bind('keydown', 'Escape', function (evt) {
         //关闭层代码
+        if (evt.data != evt.originalEvent.code){
+            return true;
+        }
         closeDialog();
         return false;
     }
