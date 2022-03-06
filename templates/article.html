@@ -1,41 +1,41 @@
-
-{% block left_content %}
-<div id="fade" class="black_overlay"></div>
-<div id="light" class="white_content">
-    <div class="win-func"><a href = "javascript:void(0)" onclick = "closeDialog()">【关闭】</a></div>
-    <div class="vditor-reset  article">
-        <div class="article-title">
-            {% if article.is_recommend %}
-            <span class="article-flag article-recommend">荐</span>
-            {% endif %}
-            <span class="article-flag article-type" >原</span>
-{#                <a href="{% url 'detail' article.id %} " onclick = "openDialog()">#}
-            <a href="javascript:void(0)" onclick=" openDialog('{% url 'detail' article.id %}')">
-                {{ article.title }}
-            </a>
+<div class="article">
+    <div class="article-title">
+        {% if article.is_recommend %}
+        <span class="article-flag article-recommend">荐</span>
+        {% endif %}
+        <span class="article-flag article-type" >原</span>
+        <a href="javascript:void(0)" onclick=" openDialog('{% url 'detail' article.id %}')">
+            {{ article.title }}
+        </a>
+    </div>
+    <div class="article-meta">
+        <div class="article-folder">
+            <a class="fa fa-folder-open">{{ article.category.pid }}</a>.<a>{{ article.category  }}</a>
+            <i class="fa fa-tags"></i>
+            {% for tag in  article.tag.all %}
+            <a class="tag-item">{{ tag }}</a>
+            {% endfor %}
         </div>
-        <div class="article-meta">
-            <div class="article-folder">
-                <a class="fa fa-folder-open">{{ article.category.pid }}</a>.<a>{{ article.category  }}</a>
-                <i class="fa fa-tags"></i>
-                {% for tag in  article.tag.all %}
-                <a class="tag-item">{{ tag }}</a>
-                {% endfor %}
-            </div>
-            <div class="article-info">
-                <span class="fa fa-user">{{ article.user.nicename }}</span>
-                <span class="fa fa-clock-o">{{ article.date_publish | date:'Y-m-d' }}</span>
-                <span class="fa fa-eye">{{ article.click_count }}阅读</span>
-                <span class="fa fa-comments-o">{{ article.comment_set.all.count }}评论</span>
-                <span class="fa fa-heart-o">{{ article.likes_count }}喜欢</span>
-            </div>
-        </div>
-        <div class="article-content">
-            {{ article.content | safe }}
+        <div class="article-info">
+            <span class="fa fa-user">{{ article.user.nicename }}</span>
+            <span class="fa fa-clock-o">{{ article.date_publish | date:'Y-m-d' }}</span>
+            <span class="fa fa-eye">{{ article.click_count }}阅读</span>
+            <span class="fa fa-comments-o">{{ article.comment_set.all.count }}评论</span>
+            <span class="fa fa-heart-o">{{ article.likes_count }}喜欢</span>
         </div>
     </div>
+    <div class="vditor-reset article-content">
+    {% if request.path == "/" %}
+        {% if article.desc %}
+            {{ article.desc|safe }}
+        {% else %}
+            {{ article.content|safe|truncatewords:5|linebreaks }}
+        {% endif %}
+    {% else %}
+        {{ article.content|safe }}
+    {% endif %}
+    </div>
 </div>
-{% endblock %}
 
 
 
