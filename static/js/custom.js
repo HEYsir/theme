@@ -20,7 +20,8 @@ function openDialog(url){
         success: function(result){
             // const markdown = "**Markdown**"
             // console.log("\nmarkdown input:", markdown, "\n")
-            let Md2HTMLCon = lute.MarkdownStr("", result)
+            // let Md2HTMLCon = lute.MarkdownStr("", result)
+            Md2HTMLCon = result
             $("#pop-article").html(Md2HTMLCon);
             document.getElementById('pop-article').style.display='block';
         },
@@ -32,8 +33,9 @@ function openDialog(url){
 }
 function closeDialog(){
     window.parent.location.reload();
-    document.getElementById('light').style.display='none';
-    document.getElementById('fade').style.display='none'
+    // document.getElementById('pop-article').style.display='none';
+    // document.getElementById('light').style.display='none';
+    // document.getElementById('fade').style.display='none'
 }
 
 $(document).bind('keydown', 'esc', function (evt) {
