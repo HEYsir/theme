@@ -3,14 +3,13 @@
     <img :src="imageUrl" alt="Welcome Image" class="fullscreen-image" />
     <div class="wrapper text-overlay">{{ welcomeText }}</div>
   </div>
-
-  <RouterView v-else />
+  <MainLayout v-else />
 </template>
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
-
+import MainLayout from './layout/MainLayout.vue'
 const router = useRouter()
 // 假设这是你的图片路径
 const welcomeText = '临渊羡鱼，不如退而结网'
@@ -33,7 +32,7 @@ onMounted(() => {
 const navigateToHomePage = () => {
   // 这里假设你使用的是Vue Router进行导航
   // 确保你已经正确导入了useRouter
-  router.push('/')
+  router.push('/main')
 }
 </script>
 
