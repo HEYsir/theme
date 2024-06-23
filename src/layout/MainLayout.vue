@@ -2,7 +2,7 @@
   <el-container>
     <el-aside>侧边栏</el-aside>
     <el-container>
-      <el-header>导航栏</el-header>
+      <el-header><navbar /></el-header>
       <el-main>
         内容区
         <br />
@@ -71,7 +71,9 @@
     <el-aside>右侧边栏</el-aside>
   </el-container>
 </template>
-
+<script setup>
+import navbar from '@/components/NavBar.vue'
+</script>
 <style>
 :root {
   --el-aside-width: 200px;
@@ -90,6 +92,7 @@
 .el-header {
   height: var(--el-header-height);
   background-color: rgb(230, 149, 226);
+  padding: 0% !important;
 }
 
 .el-footer {
