@@ -5,7 +5,7 @@
         <div class="article-title">
           <span v-if="article.is_recommend" class="article-flag article-recommend">荐</span>
           <span class="article-flag article-type">原</span>
-          <a href="javascript:void(0)" onclick=" openDialog('{% url 'detail' article.id %}')">
+          <a href="javascript:void(0)" @click="myDialog({ article: article })">
             {{ article.title }}
           </a>
         </div>
@@ -33,10 +33,15 @@
 
 <script setup lang="ts">
 import { computed, defineProps, type PropType } from 'vue'
+import { useCommandComponent } from '../hooks/useCommandComponent'
+import ArticleDetail from './ArticleDetail.vue'
+
+const myDialog = useCommandComponent(ArticleDetail)
 
 const props = defineProps({
   article: {
     type: Object as PropType<{
+      pageid: string
       is_recommend: boolean
       title?: string
       desc?: string

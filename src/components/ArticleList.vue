@@ -12,6 +12,7 @@ import { reactive } from 'vue'
 
 const articleList = reactive([
   {
+    pageid: 'ccc',
     is_recommend: true,
     title: '这是个随便测试的东西',
     content: `不知道大家使用 Vue3 的时候有没有这样的疑惑"
@@ -31,6 +32,7 @@ const articleList = reactive([
     likes_count: 30
   },
   {
+    url: 'bbb',
     is_recommend: true,
     title: '这是个随便测试的东西',
     content: `不知道大家使用 Vue3 的时候有没有这样的疑惑"
@@ -50,6 +52,7 @@ const articleList = reactive([
     likes_count: 30
   },
   {
+    url: 'aaaa',
     is_recommend: true,
     title: '这是个随便测试的东西',
     content: `不知道大家使用 Vue3 的时候有没有这样的疑惑"
