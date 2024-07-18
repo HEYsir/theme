@@ -42,7 +42,7 @@ const mobileMenuClick = () => {
 </script>
 
 <style scoped>
-::v-deep .el-drawer__body {
+:deep(.el-drawer__body) {
   padding: 0px !important;
 }
 .pc-only {

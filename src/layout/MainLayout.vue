@@ -5,53 +5,7 @@
       <el-header><navbar /></el-header>
       <el-main>
         内容区
-        <br />
-        asdfasdfasdf
-        asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf<br />
-        asdfasd<br />
-        <br />
-        <br />
-        <br />
-        <br />
-
-        <br />
-        <br />
-        <br />
-        asdfasd<br />
-        asdfasdf<br />
-        asdfasdfasdf<br />
-        asdfasd<br />
-        <br />
-        <br />
-        <br />
-        <br />
-
-        <br />
-        <br />
-        <br />
-        asdfasd<br />
-        asdfasdf<br />
-        asdfasdfasdf<br />
-        asdfasd<br />
-        <br />
-        <br />
-        <br />
-        <br />
-
-        <br />
-        <br />
-        <br />
-        asdfasd<br />
-        asdfasdf<br />
-        asdfasdfasdf<br />
-        asdfasd<br />
-        <br />
-        <br />
-        <br />
-        <br />
-
-        <br />
-        <br />
+        <ArticleList />
         <RouterView />
       </el-main>
       <el-footer>
@@ -72,6 +26,7 @@
   </el-container>
 </template>
 <script setup>
+import ArticleList from '@/components/ArticleList.vue'
 import navbar from '@/components/NavBar.vue'
 </script>
 <style>
