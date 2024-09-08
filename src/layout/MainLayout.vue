@@ -2,6 +2,8 @@
   <el-container>
     <el-aside>
       <DesignerPanel />
+      <TopicCard title="技术栈 & 债" :topicList="topicList" />
+      <TopicCard title="推荐链接" :topicList="['都是大神']" />
     </el-aside>
     <el-container>
       <el-header><navbar /></el-header>
@@ -30,6 +32,9 @@
 import ArticleList from '@/components/ArticleList.vue'
 import DesignerPanel from '@/components/DesignerPanel.vue'
 import navbar from '@/components/NavBar.vue'
+import TopicCard from '@/components/TopicCard.vue'
+
+const topicList = ['c', 'rust', 'linux', '嵌入式开发', 'python', 'Django', '前端', '数据库', '硬件']
 </script>
 <style>
 :root {
