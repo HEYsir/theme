@@ -1,10 +1,11 @@
 <template>
   <el-container>
-    <el-aside>侧边栏</el-aside>
+    <el-aside>
+      <DesignerPanel />
+    </el-aside>
     <el-container>
       <el-header><navbar /></el-header>
       <el-main>
-        内容区
         <ArticleList />
         <RouterView />
       </el-main>
@@ -27,11 +28,12 @@
 </template>
 <script setup>
 import ArticleList from '@/components/ArticleList.vue'
+import DesignerPanel from '@/components/DesignerPanel.vue'
 import navbar from '@/components/NavBar.vue'
 </script>
 <style>
 :root {
-  --el-aside-width: 200px;
+  --el-aside-width: 250px;
   --el-header-height: 60px;
 }
 .el-container {

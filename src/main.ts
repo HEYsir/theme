@@ -11,16 +11,18 @@ import 'element-plus/dist/index.css'
 
 /* import font awesome icon component */
 import { library } from '@fortawesome/fontawesome-svg-core'
+import { faGithub, faWeibo } from '@fortawesome/free-brands-svg-icons'
 import {
   faClock,
   faComments,
   faEye,
   faFolderOpen,
   faHeart,
+  faRss,
   faTags
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-library.add(faFolderOpen, faTags, faClock, faEye, faComments, faHeart)
+library.add(faFolderOpen, faTags, faClock, faEye, faComments, faHeart, faRss, faGithub, faWeibo)
 
 const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon)
