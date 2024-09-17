@@ -25,13 +25,17 @@
         </div>
       </el-footer>
     </el-container>
-    <el-aside>右侧边栏</el-aside>
+    <el-aside>
+      <StatusTab style="max-height: 50%" />
+      <TopicCard title="专题" :topicList="['Django博客开发', 'Rust']"
+    /></el-aside>
   </el-container>
 </template>
 <script setup>
 import ArticleList from '@/components/ArticleList.vue'
 import DesignerPanel from '@/components/DesignerPanel.vue'
 import navbar from '@/components/NavBar.vue'
+import StatusTab from '@/components/StatusTab.vue'
 import TopicCard from '@/components/TopicCard.vue'
 
 const topicList = ['c', 'rust', 'linux', '嵌入式开发', 'python', 'Django', '前端', '数据库', '硬件']
