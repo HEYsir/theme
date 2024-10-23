@@ -9,8 +9,39 @@ import router from './router'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 
-const app = createApp(App)
+/* import font awesome icon component */
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faGithub, faWeibo } from '@fortawesome/free-brands-svg-icons'
+import {
+  faClock,
+  faComment,
+  faComments,
+  faEye,
+  faFire,
+  faFolderOpen,
+  faHeart,
+  faList,
+  faRss,
+  faTags
+} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+library.add(
+  faFolderOpen,
+  faTags,
+  faClock,
+  faEye,
+  faComments,
+  faHeart,
+  faRss,
+  faGithub,
+  faWeibo,
+  faFire,
+  faList,
+  faComment
+)
 
+const app = createApp(App)
+app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(createPinia())
 app.use(router)
 // size 用于设置表单组件的默认尺寸，zIndex 用于设置弹出组件的层级，zIndex 的默认值为 2000。
