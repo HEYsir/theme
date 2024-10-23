@@ -7,6 +7,7 @@
 </template>
 
 <script setup lang="ts">
+import { Test } from '@/api/api'
 import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import MainLayout from './layout/MainLayout.vue'
@@ -17,12 +18,22 @@ const imageUrl = 'https://img.36krcdn.com/20221128/v2_997cf69b36b046fe847f6c017c
 // 使用ref来追踪导航是否已经发生
 const hasNavigated = ref(true)
 
+const test1 = async () => {
+  const testParams = {
+    username: 'test',
+    password: 'test'
+  }
+  const res = await Test.test1(testParams)
+  console.log(res)
+}
 onMounted(() => {
   // 设置一个定时器，在5秒后导航到主页
   const timer = setTimeout(() => {
     navigateToHomePage()
     hasNavigated.value = false // 标记导航已完成
   }, 3000)
+
+  test1()
 
   // 如果组件被卸载，清除定时器以避免内存泄漏
   return () => clearTimeout(timer)
